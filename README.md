@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project uses [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`], TypeScript y Tailwindcss.
 
-## Getting Started
+## Run locally
 
 First, run the development server:
 
@@ -14,23 +14,26 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `Link WebSite`
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+[Clone -Mercado Libre- from a seller](https://nalancay-productseller.netlify.app).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Resources
 
-## Learn More
+- The Mercado Libre API has an endpoint that allows you to search for products from a particular seller, the endpoint is `https://api.mercadolibre.com/sites/MLA/search?seller_id=179571326`.
 
-To learn more about Next.js, take a look at the following resources:
+## Requirements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. - When entering the `/` route we should see a list of all the seller's products in the form of a grid.
+2. - When entering the route `/[category_id]` we should see a list of products corresponding to that category.
+3. - On all routes, we should see a menu on the left with the available categories. Categories should be displayed in a tree form, i.e. if a category has subcategories, they should be displayed as a submenu.
+4. - Categories should start collapsed, and clicking a `-` or `+` button should expand or collapse individually.
+5. - Categories must maintain their expand/collapse state when navigating between routes.
+6. - When clicking on a category, we should navigate to the corresponding `/[category_id]` path.
+7. - When clicking on a product it should redirect us to the Mercado Libre website for that product.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Example
 
-## Deploy on Vercel
+[![Ejemplo](./assets/mock.png)](./assets/mock.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Note: The design is free and responsive.
